@@ -314,7 +314,7 @@
 % Name command
 \newcommand{\namesection}[3]{
 	\centering{
-		\fontsize{40pt}{60pt}
+		\fontsize{32pt}{48pt}
 		\fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1
 		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 	} \\[5pt]
@@ -358,6 +358,7 @@
 }
 
 % Setting up events location and date
-\newcommand{\cvevent}[2]{
-	{\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#1}%
-			\ifstrequal{#2}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#2}}\par}}
+\newcommand{\cvevent}[2][]{
+    {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#2}%
+        \ifstrequal{#1}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#1}}\par}
+}
